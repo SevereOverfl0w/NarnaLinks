@@ -5,13 +5,14 @@ import java.util.*;
 
 import org.bukkit.command.*;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.ChatColor;
  
  
 public class narnalinks extends JavaPlugin {
 	
-	private String ReplaceColours(String message) {
-		return message.replace("(?i)$", "§");
-		 }	 
+    private String ReplaceColours(String message) {
+        return ChatColor.translateAlternativeColorCodes("$", message);
+    }	 
 
 	
     @Override
@@ -21,9 +22,9 @@ public class narnalinks extends JavaPlugin {
         this.getCommand("site").setExecutor(new CommandExecutor() {
  
             public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-                List<String> site = narnalinks.this.getConfig().getStringList(ReplaceColours("site"));
+                List<String> site = narnalinks.this.getConfig().getStringList("site");
                 for (String s : site)
-                    sender.sendMessage(s);
+                    sender.sendMessage(ReplaceColours(s));
                 
                 return true;
             }
@@ -34,9 +35,9 @@ public class narnalinks extends JavaPlugin {
         this.getCommand("vote").setExecutor(new CommandExecutor() {
         	
         	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-                List<String> vote = narnalinks.this.getConfig().getStringList(ReplaceColours("vote"));
+                List<String> vote = narnalinks.this.getConfig().getStringList("vote");
                 for (String s : vote)
-                    sender.sendMessage(s);
+                    sender.sendMessage(ReplaceColours(s));
                 
                 return true;
             
@@ -47,9 +48,9 @@ public class narnalinks extends JavaPlugin {
         this.getCommand("donate").setExecutor(new CommandExecutor() {
         	
         	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-                List<String> donate = narnalinks.this.getConfig().getStringList(ReplaceColours("donate"));
+                List<String> donate = narnalinks.this.getConfig().getStringList("donate");
                 for (String s : donate)
-                    sender.sendMessage(s);
+                    sender.sendMessage(ReplaceColours(s));
                 
                 return true;
             
@@ -60,9 +61,9 @@ public class narnalinks extends JavaPlugin {
         this.getCommand("contact").setExecutor(new CommandExecutor() {
         	
         	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-                List<String> contact = narnalinks.this.getConfig().getStringList(ReplaceColours("contact"));
+                List<String> contact = narnalinks.this.getConfig().getStringList("contact");
                 for (String s : contact)
-                    sender.sendMessage(s);
+                    sender.sendMessage(ReplaceColours(s));
                 
                 return true;
             
@@ -73,9 +74,9 @@ public class narnalinks extends JavaPlugin {
         this.getCommand("dynmap").setExecutor(new CommandExecutor() {
         	
         	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-                List<String> dynmap = narnalinks.this.getConfig().getStringList(ReplaceColours("dynmap"));
+                List<String> dynmap = narnalinks.this.getConfig().getStringList("dynmap");
                 for (String s : dynmap)
-                    sender.sendMessage(s);
+                    sender.sendMessage(ReplaceColours(s));
                 
                 return true;
             
