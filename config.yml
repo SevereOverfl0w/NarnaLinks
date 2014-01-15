@@ -1,7 +1,7 @@
 #Default configuration for NarnaLinks
 #Change the lists to your needs, you can add as many links to any command as you like. (For example like I did with vote)
 site:
-  - sitelink
+  - '&2sitelink'
 vote:
   - votelink 1
   - votelink 2

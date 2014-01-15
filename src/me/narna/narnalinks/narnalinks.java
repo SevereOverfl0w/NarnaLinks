@@ -2,12 +2,12 @@ package me.narna.narnalinks;
 
 
 import java.util.*;
-
 import org.bukkit.command.*;
 import org.bukkit.plugin.java.JavaPlugin;
  
  
 public class narnalinks extends JavaPlugin {
+	
  
     @Override
     public void onEnable() {
