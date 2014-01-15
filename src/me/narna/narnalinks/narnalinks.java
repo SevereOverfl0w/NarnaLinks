@@ -11,7 +11,7 @@ import org.bukkit.ChatColor;
 public class narnalinks extends JavaPlugin {
 	
     private String ReplaceColours(String message) {
-        return ChatColor.translateAlternativeColorCodes("$", message);
+        return ChatColor.translateAlternateColorCodes("$", message);
     }	 
 
 	
